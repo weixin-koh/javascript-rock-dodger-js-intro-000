@@ -131,7 +131,7 @@ function endGame() {
 
   // for (var i = 0; i < ROCKS.length; i++) {
   //   var theRock = GAME.querySelector('.rock')
-  // 
+  //
   //   if (theRock != null) {
   //     GAME.removeChild(theRock)
   //   }
