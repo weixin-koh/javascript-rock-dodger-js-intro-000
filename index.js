@@ -123,13 +123,19 @@ function createRock(x) {
 function endGame() {
   clearInterval(gameInterval)
 
-  for (var i = 0; i < ROCKS.length; i++) {
-    var theRock = GAME.querySelector('.rock')
+  var toRemove = document.querySelectorAll('.rock')
 
-    if (theRock != null) {
-      GAME.removeChild(theRock)
-    }
+  for (var i = 0; i < toRemove.length; i++) {
+    toRemove[i].parentNode.removeChild(toRemove[i])
   }
+
+  // for (var i = 0; i < ROCKS.length; i++) {
+  //   var theRock = GAME.querySelector('.rock')
+  // 
+  //   if (theRock != null) {
+  //     GAME.removeChild(theRock)
+  //   }
+  // }
 
   window.removeEventListener('keydown', function() {})
   alert("YOU LOSE!")
